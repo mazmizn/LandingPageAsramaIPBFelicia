@@ -1,33 +1,114 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asrama Felicia | FAQ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body data-page="faq">
-  <header class="site-header">
-    <nav class="navbar" aria-label="Navigasi utama">
-      <a class="brand" href="index.html"><span class="brand-mark"><img src="images/logo.jfif" alt="Logo Asrama Felicia" /></span><span><strong>Asrama Felicia</strong><small>Rumah Kader Mahasiswa</small></span></a>
-      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      <div class="nav-panel">
-        <a href="index.html" data-nav="home">Home</a><a href="tentang.html" data-nav="tentang">Tentang</a><a href="blog.html" data-nav="blog">Blog</a><a href="berita.html" data-nav="berita">Berita</a><a href="galeri.html" data-nav="galeri">Galeri</a><a href="kegiatan.html" data-nav="kegiatan">Kegiatan</a><a href="alumni.html" data-nav="alumni">Alumni</a><a href="faq.html" data-nav="faq">FAQ</a><a href="kontak.html" data-nav="kontak">Kontak</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asrama Felicia | FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="faq">
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navigasi utama">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark"
+            ><img src="images/logo.jfif" alt="Logo Asrama Felicia" /></span
+          ><span
+            ><strong>Asrama Felicia</strong
+            ><small>Rumah Kader Mahasiswa</small></span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Buka menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-panel">
+          <a href="index.html" data-nav="home">Home</a
+          ><a href="tentang.html" data-nav="tentang">Tentang</a
+          ><a href="blog.html" data-nav="blog">Blog</a
+          ><a href="berita.html" data-nav="berita">Berita</a
+          ><a href="galeri.html" data-nav="galeri">Galeri</a
+          ><a href="kegiatan.html" data-nav="kegiatan">Kegiatan</a
+          ><a href="alumni.html" data-nav="alumni">Alumni</a
+          ><a href="faq.html" data-nav="faq">FAQ</a
+          ><a href="kontak.html" data-nav="kontak">Kontak</a>
+        </div>
+        <div class="nav-search" role="search">
+          <input
+            id="siteSearch"
+            type="search"
+            placeholder="Cari..."
+            autocomplete="off"
+          />
+          <div
+            class="search-results"
+            id="searchResults"
+            aria-live="polite"
+          ></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="section-kicker">FAQ</p>
+        <h1>Pertanyaan yang sering muncul.</h1>
+        <p>
+          Jawaban singkat untuk calon kader dan mahasiswa yang ingin
+          mengenal Felicia.
+        </p>
+      </section>
+      <section class="section faq-list">
+        <details>
+          <summary>Siapa yang bisa bergabung dengan Asrama Felicia?</summary>
+          <p>
+            Mahasiswa aktif yang ingin mengikuti proses pembinaan karakter,
+            kepemimpinan, dan kehidupan komunitas.
+          </p>
+        </details>
+        <details>
+          <summary>Apakah harus tinggal di asrama?</summary>
+          <p>
+            Program utama berbasis kehidupan bersama, tetapi beberapa kegiatan
+            terbuka dapat diikuti oleh mahasiswa mitra sesuai agenda.
+          </p>
+        </details>
+        <details>
+          <summary>Bagaimana cara mendaftar?</summary>
+          <p>
+            Calon kader dapat menghubungi kontak Felicia, mengikuti sesi
+            pengenalan, lalu melengkapi formulir pendaftaran.
+          </p>
+        </details>
+        <details>
+          <summary>Apa saja kegiatan rutinnya?</summary>
+          <p>
+            Mentoring kader, forum diskusi, latihan kepemimpinan, pendampingan
+            akademik, kegiatan sosial, dan forum alumni.
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer class="footer">
+      <div>
+        <strong>Asrama Felicia</strong>
+        <p>
+          Pengkaderan mahasiswa untuk karakter, kepemimpinan, dan kontribusi.
+        </p>
       </div>
-      <div class="nav-search" role="search"><input id="siteSearch" type="search" placeholder="Cari..." autocomplete="off" /><div class="search-results" id="searchResults" aria-live="polite"></div></div>
-    </nav>
-  </header>
-  <main>    <section class="page-hero"><p class="section-kicker">FAQ</p><h1>Pertanyaan yang sering muncul.</h1><p>Jawaban singkat untuk calon kader, mitra, dan mahasiswa yang ingin mengenal Felicia.</p></section>
-    <section class="section faq-list"><details open><summary>Siapa yang bisa bergabung dengan Asrama Felicia?</summary><p>Mahasiswa aktif yang ingin mengikuti proses pembinaan karakter, kepemimpinan, dan kehidupan komunitas.</p></details><details><summary>Apakah harus tinggal di asrama?</summary><p>Program utama berbasis kehidupan bersama, tetapi beberapa kegiatan terbuka dapat diikuti oleh mahasiswa mitra sesuai agenda.</p></details><details><summary>Bagaimana cara mendaftar?</summary><p>Calon kader dapat menghubungi kontak Felicia, mengikuti sesi pengenalan, lalu melengkapi formulir pendaftaran.</p></details><details><summary>Apa saja kegiatan rutinnya?</summary><p>Mentoring kader, forum diskusi, latihan kepemimpinan, pendampingan akademik, kegiatan sosial, dan forum alumni.</p></details></section>  </main>
-  <footer class="footer">
-    <div><strong>Asrama Felicia</strong><p>Pengkaderan mahasiswa untuk karakter, kepemimpinan, dan kontribusi.</p></div>
-    <div class="footer-contact"><a href="mailto:asramafelicia@example.com">asramafelicia@example.com</a><a href="https://wa.me/6281234567890">+62 812-3456-7890</a></div>
-  </footer>
-  <script src="script.js"></script>
-</body>
+      <div class="footer-contact">
+        <a href="mailto:asramafelicia@example.com">asramafelicia@example.com</a
+        ><a href="https://wa.me/6281234567890">+62 812-3456-7890</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
