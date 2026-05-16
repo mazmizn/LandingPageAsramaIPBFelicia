@@ -70,7 +70,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .result-item span, .empty-result { color: var(--muted); font-size: 0.82rem; margin: 0; }
 
 .hero-home { max-width: none; margin: 0; min-height: calc(100vh - 76px); padding: clamp(76px, 12vw, 150px) max(22px, calc((100vw - 1220px) / 2)) 88px; display: flex; align-items: center; position: relative; isolation: isolate; overflow: hidden; }
-.hero-home.hero-bg { background-image: linear-gradient(90deg, rgba(6, 36, 61, 0.90), rgba(4, 138, 191, 0.62) 58%, rgba(34, 198, 215, 0.22)), url("https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1800&q=84"); background-size: cover; background-position: center; }
+.hero-home.hero-bg { background-image: linear-gradient(90deg, rgba(6, 36, 61, 0.90), rgba(4, 138, 191, 0.62) 58%, rgba(34, 198, 215, 0.22)), url("images/foto_beranda.jpg"); background-size: cover; background-position: center; }
 .hero-home::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(0deg, var(--paper), transparent); z-index: -1; }
 .hero-bg .hero-text { max-width: 780px; color: white; }
 .hero-text h1, .page-hero h1 { margin: 0; max-width: 780px; font-size: clamp(2.45rem, 6vw, 5.35rem); line-height: 1.02; letter-spacing: 0; color: var(--blue-950); }
