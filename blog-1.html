@@ -2,80 +2,278 @@
 <html lang="id">
 
 <head>
+
+    <!-- Mengatur karakter UTF-8 -->
     <meta charset="UTF-8" />
+
+    <!-- Membuat website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Judul halaman -->
     <title>Menjadi Mahasiswa yang Selesai dengan Diri Sendiri</title>
+
+    <!-- Preconnect ke Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Preconnect asset font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+
+    <!-- Import font Inter -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
+
+    <!-- Menghubungkan file CSS -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 
+<!-- Penanda halaman berita -->
 <body data-page="berita">
+
+    <!-- Header website -->
     <header class="site-header">
+
+        <!-- Navbar -->
         <nav class="navbar" aria-label="Navigasi utama">
-            <a class="brand" href="index.html"><span class="brand-mark"><img src="images/logo.jfif"
-                        alt="Logo Asrama IPB Felicia" /></span><span><strong>Asrama IPB Felicia</strong><small>Asrama
-                        Pembinaan Mahasiswa</small></span></a>
-            <button class="menu-toggle" type="button" aria-label="Buka menu"
-                aria-expanded="false"><span></span><span></span><span></span></button>
+
+            <!-- Branding / logo -->
+            <a class="brand" href="index.html">
+
+                <!-- Logo -->
+                <span class="brand-mark">
+                    <img
+                        src="images/logo.jfif"
+                        alt="Logo Asrama IPB Felicia" />
+                </span>
+
+                <!-- Nama asrama -->
+                <span>
+                    <strong>Asrama IPB Felicia</strong>
+
+                    <small>
+                        Asrama Pembinaan Mahasiswa
+                    </small>
+                </span>
+            </a>
+
+            <!-- Tombol hamburger menu -->
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Buka menu"
+                aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu navigasi -->
             <div class="nav-panel">
-                <a href="index.html" data-nav="home">Home</a><a href="tentang.html" data-nav="tentang">Tentang</a><a
-                    href="blog.html" data-nav="blog">Blog</a><a href="berita.html" data-nav="berita">Berita</a><a
-                    href="galeri.html" data-nav="galeri">Galeri</a><a href="kegiatan.html"
-                    data-nav="kegiatan">Kegiatan</a><a href="alumni.html" data-nav="alumni">Alumni</a><a href="faq.html"
-                    data-nav="faq">FAQ</a><a href="kontak.html" data-nav="kontak">Kontak</a>
+
+                <a href="index.html" data-nav="home">
+                    Home
+                </a>
+
+                <a href="tentang.html" data-nav="tentang">
+                    Tentang
+                </a>
+
+                <a href="blog.html" data-nav="blog">
+                    Blog
+                </a>
+
+                <a href="berita.html" data-nav="berita">
+                    Berita
+                </a>
+
+                <a href="galeri.html" data-nav="galeri">
+                    Galeri
+                </a>
+
+                <a href="kegiatan.html" data-nav="kegiatan">
+                    Kegiatan
+                </a>
+
+                <a href="alumni.html" data-nav="alumni">
+                    Alumni
+                </a>
+
+                <a href="faq.html" data-nav="faq">
+                    FAQ
+                </a>
+
+                <a href="kontak.html" data-nav="kontak">
+                    Kontak
+                </a>
             </div>
-            <div class="nav-search" role="search"><input id="siteSearch" type="search" placeholder="Cari..."
+
+            <!-- Search bar -->
+            <div class="nav-search" role="search">
+
+                <!-- Input pencarian -->
+                <input
+                    id="siteSearch"
+                    type="search"
+                    placeholder="Cari..."
                     autocomplete="off" />
-                <div class="search-results" id="searchResults" aria-live="polite"></div>
+
+                <!-- Tempat hasil pencarian -->
+                <div
+                    class="search-results"
+                    id="searchResults"
+                    aria-live="polite"></div>
             </div>
         </nav>
     </header>
+
+    <!-- Konten utama -->
     <main>
-        <section class="detail-hero"><img
+
+        <!-- Hero detail blog -->
+        <section class="detail-hero">
+
+            <!-- Thumbnail blog -->
+            <img
                 src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=80"
                 alt="Blog-1" />
+
+            <!-- Informasi blog -->
             <div>
+
+                <!-- Kategori -->
                 <p class="section-kicker">Berita</p>
-                <h1>Menjadi Mahasiswa yang Selesai dengan Diri Sendiri</h1>
+
+                <!-- Judul blog -->
+                <h1>
+                    Menjadi Mahasiswa yang Selesai dengan Diri Sendiri
+                </h1>
             </div>
         </section>
+
+        <!-- Isi detail blog -->
         <section class="section detail-body">
+
+            <!-- Artikel utama -->
             <article>
+
+                <!-- Judul isi -->
                 <h2>Isi Blog</h2>
-                <p>Menjadi "selesai dengan diri sendiri" berarti mampu memahami nilai, tujuan, dan batasan pribadi
-                    sehingga menghadapi masa studi dengan kedewasaan dan tanggung jawab. Istilah ini bukan tentang
-                    merasa sempurna, melainkan tentang mengembangkan integritas, kemandirian, dan ketenangan batin
-                    saat menghadapi tantangan akademik dan sosial.</p>
-                <p>Penting untuk membangun kebiasaan refleksi: evaluasi mingguan terhadap tujuan belajar, merawat
-                    kesehatan mental dan fisik, serta mencari bimbingan dari mentor atau senior. Kegiatan seperti
-                    diskusi kelompok, magang, dan proyek kolaboratif membantu menerjemahkan teori menjadi praktik
-                    dan memperkuat rasa percaya diri.</p>
-                <p>Selain keterampilan teknis, mahasiswa perlu mengasah keterampilan interpersonal—komunikasi,
-                    manajemen waktu, dan empati—yang akan menentukan kualitas hubungan profesional di masa depan.
-                    Menyusun rencana belajar yang realistis dan memberi ruang untuk istirahat membuat proses
-                    pembelajaran lebih berkelanjutan.</p>
-                <p>Mulailah dengan langkah kecil: tetapkan satu tujuan mingguan, berkumpul dengan teman untuk saling
-                    dukung, dan catat kemajuan Anda. Proses menjadi selesai dengan diri sendiri adalah perjalanan
-                    bertahap yang memberi makna pada masa kuliah dan mempersiapkan Anda menghadapi kehidupan setelahnya.</p>
+
+                <!-- Paragraf pertama -->
+                <p>
+                    Menjadi "selesai dengan diri sendiri"
+                    berarti mampu memahami nilai,
+                    tujuan, dan batasan pribadi
+                    sehingga menghadapi masa studi
+                    dengan kedewasaan dan tanggung jawab.
+                    Istilah ini bukan tentang merasa sempurna,
+                    melainkan tentang mengembangkan integritas,
+                    kemandirian, dan ketenangan batin
+                    saat menghadapi tantangan akademik dan sosial.
+                </p>
+
+                <!-- Paragraf kedua -->
+                <p>
+                    Penting untuk membangun kebiasaan refleksi:
+                    evaluasi mingguan terhadap tujuan belajar,
+                    merawat kesehatan mental dan fisik,
+                    serta mencari bimbingan dari mentor atau senior.
+                    Kegiatan seperti diskusi kelompok,
+                    magang, dan proyek kolaboratif membantu
+                    menerjemahkan teori menjadi praktik
+                    dan memperkuat rasa percaya diri.
+                </p>
+
+                <!-- Paragraf ketiga -->
+                <p>
+                    Selain keterampilan teknis,
+                    mahasiswa perlu mengasah
+                    keterampilan interpersonal—komunikasi,
+                    manajemen waktu, dan empati—
+                    yang akan menentukan kualitas hubungan
+                    profesional di masa depan.
+                    Menyusun rencana belajar yang realistis
+                    dan memberi ruang untuk istirahat
+                    membuat proses pembelajaran
+                    lebih berkelanjutan.
+                </p>
+
+                <!-- Paragraf keempat -->
+                <p>
+                    Mulailah dengan langkah kecil:
+                    tetapkan satu tujuan mingguan,
+                    berkumpul dengan teman untuk saling dukung,
+                    dan catat kemajuan Anda.
+                    Proses menjadi selesai dengan diri sendiri
+                    adalah perjalanan bertahap yang memberi makna
+                    pada masa kuliah dan mempersiapkan Anda
+                    menghadapi kehidupan setelahnya.
+                </p>
             </article>
+
+            <!-- Sidebar informasi -->
             <aside>
+
+                <!-- Judul sidebar -->
                 <h3>Ringkasan</h3>
-                <p><strong>Tanggal:</strong> 23 Mei 2026</p>
-                <p><strong>Format:</strong> Blog</p>
-                <p><strong>Fokus:</strong> Karakter</p>
+
+                <!-- Tanggal -->
+                <p>
+                    <strong>Tanggal:</strong>
+                    23 Mei 2026
+                </p>
+
+                <!-- Format konten -->
+                <p>
+                    <strong>Format:</strong>
+                    Blog
+                </p>
+
+                <!-- Fokus pembahasan -->
+                <p>
+                    <strong>Fokus:</strong>
+                    Karakter
+                </p>
             </aside>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div><strong>Asrama IPB Felicia</strong>
-            <p>"Jangan bertanya apa yang kau terima, tapi bertanyalah apa yang kau berikan."</p>
+
+        <!-- Branding footer -->
+        <div>
+
+            <strong>Asrama IPB Felicia</strong>
+
+            <p>
+                "Jangan bertanya apa yang kau terima,
+                tapi bertanyalah apa yang kau berikan."
+            </p>
         </div>
-        <div class="footer-contact"><a href="mailto:asramafelicia24@gmail.com">asramafelicia24@gmail.com</a><a
-                href="https://wa.me/62895388790405">+62 895-3887-90405</a><a href="kontak.html">Kontak lengkap</a></div>
+
+        <!-- Kontak footer -->
+        <div class="footer-contact">
+
+            <!-- Email -->
+            <a href="mailto:asramafelicia24@gmail.com">
+                asramafelicia24@gmail.com
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/62895388790405">
+                +62 895-3887-90405
+            </a>
+
+            <!-- Link halaman kontak -->
+            <a href="kontak.html">
+                Kontak lengkap
+            </a>
+        </div>
     </footer>
+
+    <!-- Menghubungkan file JavaScript -->
     <script src="script.js"></script>
 </body>
 

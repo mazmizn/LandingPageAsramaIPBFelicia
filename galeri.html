@@ -1,33 +1,199 @@
 ﻿<!DOCTYPE html>
 <html lang="id">
+
 <head>
+  <!-- Mengatur karakter UTF-8 -->
   <meta charset="UTF-8" />
+
+  <!-- Membuat website responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Judul halaman -->
   <title>Asrama IPB Felicia | Galeri</title>
+
+  <!-- Preconnect Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- Preconnect asset font -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Import font Inter -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Menghubungkan file CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
+<!-- Penanda halaman galeri -->
 <body data-page="galeri">
+
+  <!-- Header website -->
   <header class="site-header">
+
+    <!-- Navbar utama -->
     <nav class="navbar" aria-label="Navigasi utama">
-      <a class="brand" href="index.html"><span class="brand-mark"><img src="images/logo.jfif" alt="Logo Asrama IPB Felicia" /></span><span><strong>Asrama IPB Felicia</strong><small>Asrama Pembinaan Mahasiswa</small></span></a>
-      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+      <!-- Logo dan identitas asrama -->
+      <a class="brand" href="index.html">
+
+        <!-- Logo -->
+        <span class="brand-mark">
+          <img src="images/logo.jfif" alt="Logo Asrama IPB Felicia" />
+        </span>
+
+        <!-- Nama asrama -->
+        <span>
+          <strong>Asrama IPB Felicia</strong>
+          <small>Asrama Pembinaan Mahasiswa</small>
+        </span>
+      </a>
+
+      <!-- Tombol menu mobile -->
+      <button class="menu-toggle"
+        type="button"
+        aria-label="Buka menu"
+        aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigasi menu -->
       <div class="nav-panel">
-        <a href="index.html" data-nav="home">Home</a><a href="tentang.html" data-nav="tentang">Tentang</a><a href="blog.html" data-nav="blog">Blog</a><a href="berita.html" data-nav="berita">Berita</a><a href="galeri.html" data-nav="galeri">Galeri</a><a href="kegiatan.html" data-nav="kegiatan">Kegiatan</a><a href="alumni.html" data-nav="alumni">Alumni</a><a href="faq.html" data-nav="faq">FAQ</a><a href="kontak.html" data-nav="kontak">Kontak</a>
+
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="tentang.html" data-nav="tentang">Tentang</a>
+        <a href="blog.html" data-nav="blog">Blog</a>
+        <a href="berita.html" data-nav="berita">Berita</a>
+        <a href="galeri.html" data-nav="galeri">Galeri</a>
+        <a href="kegiatan.html" data-nav="kegiatan">Kegiatan</a>
+        <a href="alumni.html" data-nav="alumni">Alumni</a>
+        <a href="faq.html" data-nav="faq">FAQ</a>
+        <a href="kontak.html" data-nav="kontak">Kontak</a>
       </div>
-      <div class="nav-search" role="search"><input id="siteSearch" type="search" placeholder="Cari..." autocomplete="off" /><div class="search-results" id="searchResults" aria-live="polite"></div></div>
+
+      <!-- Search bar -->
+      <div class="nav-search" role="search">
+
+        <!-- Input pencarian -->
+        <input
+          id="siteSearch"
+          type="search"
+          placeholder="Cari..."
+          autocomplete="off" />
+
+        <!-- Tempat hasil pencarian -->
+        <div
+          class="search-results"
+          id="searchResults"
+          aria-live="polite"></div>
+      </div>
     </nav>
   </header>
-  <main>    <section class="page-hero"><p class="section-kicker">Galeri</p><h1>Galeri Asrama IPB Felicia</h1><p>Beberapa momen yang menangkap energi pembinaan atau kebersamaan asrama.</p></section>
-    <section class="section gallery-grid"><figure class="wide"><img src="/images/galery2.jpg" alt="Olahraga Bersama" /><figcaption>Olahraga Bersama</figcaption></figure><figure><img src="./images/galery1.jpg" alt="Kunjngan Agrianita" /><figcaption>Kunjungan dari Agrianita SV IPB</figcaption></figure><figure><img src="/images/galery3.jpg" alt="Ketua HA IPB" /><figcaption>Silaturahmi dengan Alumni - Ketua HA IPB</figcaption></figure><figure><img src="/images/galery4.jpg" alt="Mantan Menteri Pertanian" /><figcaption>Silaturahmi dengan Alumni - Mantan Menteri Pertanian</figcaption></figure></section>  </main>
+
+  <!-- Konten utama -->
+  <main>
+
+    <!-- Hero section halaman galeri -->
+    <section class="page-hero">
+
+      <!-- Label section -->
+      <p class="section-kicker">Galeri</p>
+
+      <!-- Judul halaman -->
+      <h1>Galeri Asrama IPB Felicia</h1>
+
+      <!-- Deskripsi halaman -->
+      <p>
+        Beberapa momen yang menangkap energi pembinaan
+        atau kebersamaan asrama.
+      </p>
+    </section>
+
+    <!-- Grid galeri -->
+    <section class="section gallery-grid">
+
+      <!-- Foto galeri pertama -->
+      <figure class="wide">
+
+        <!-- Gambar -->
+        <img src="/images/galery2.jpg" alt="Olahraga Bersama" />
+
+        <!-- Caption -->
+        <figcaption>Olahraga Bersama</figcaption>
+      </figure>
+
+      <!-- Foto galeri kedua -->
+      <figure>
+
+        <!-- Gambar -->
+        <img src="./images/galery1.jpg" alt="Kunjngan Agrianita" />
+
+        <!-- Caption -->
+        <figcaption>Kunjungan dari Agrianita SV IPB</figcaption>
+      </figure>
+
+      <!-- Foto galeri ketiga -->
+      <figure>
+
+        <!-- Gambar -->
+        <img src="/images/galery3.jpg" alt="Ketua HA IPB" />
+
+        <!-- Caption -->
+        <figcaption>
+          Silaturahmi dengan Alumni - Ketua HA IPB
+        </figcaption>
+      </figure>
+
+      <!-- Foto galeri keempat -->
+      <figure>
+
+        <!-- Gambar -->
+        <img src="/images/galery4.jpg" alt="Mantan Menteri Pertanian" />
+
+        <!-- Caption -->
+        <figcaption>
+          Silaturahmi dengan Alumni - Mantan Menteri Pertanian
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer class="footer">
-    <div><strong>Asrama IPB Felicia</strong><p>"Jangan bertanya apa yang kau terima, tapi bertanyalah apa yang kau berikan."</p></div>
-    <div class="footer-contact"><a href="mailto:asramafelicia24@gmail.com">asramafelicia24@gmail.com</a><a href="https://wa.me/62895388790405">+62 895-3887-90405</a><a href="kontak.html">Kontak lengkap</a></div>
+
+    <!-- Branding footer -->
+    <div>
+      <strong>Asrama IPB Felicia</strong>
+
+      <p>
+        "Jangan bertanya apa yang kau terima,
+        tapi bertanyalah apa yang kau berikan."
+      </p>
+    </div>
+
+    <!-- Kontak footer -->
+    <div class="footer-contact">
+
+      <!-- Email -->
+      <a href="mailto:asramafelicia24@gmail.com">
+        asramafelicia24@gmail.com
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/62895388790405">
+        +62 895-3887-90405
+      </a>
+
+      <!-- Link kontak -->
+      <a href="kontak.html">Kontak lengkap</a>
+    </div>
   </footer>
+
+  <!-- Menghubungkan file JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
-
-
