@@ -1,4 +1,8 @@
-﻿:root {
+﻿/* =========================================
+   VARIABEL GLOBAL (CSS Custom Properties)
+   Digunakan untuk menyimpan warna tema, bayangan, dan radius border
+   ========================================= */
+:root {
   --blue-950: #06243d;
   --blue-900: #07345f;
   --blue-700: #048abf;
@@ -13,11 +17,14 @@
   --radius: 8px;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+/* =========================================
+   RESET & PENGATURAN DASAR
+   ========================================= */
+* { box-sizing: border-box; } /* Memastikan padding dan border masuk dalam perhitungan lebar/tinggi elemen */
+html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; } /* Scroll halus dan mencegah scroll horizontal */
 body {
   margin: 0;
-  padding-top: 76px;
+  padding-top: 76px; /* Memberi ruang agar konten tidak tertutup header yang fixed */
   max-width: 100%;
   overflow-x: hidden;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -25,9 +32,12 @@ body {
   background: radial-gradient(circle at 12% 0%, rgba(34, 198, 215, 0.16), transparent 30%), linear-gradient(180deg, #f8fdff 0%, var(--paper) 48%, #ffffff 100%);
   line-height: 1.6;
 }
-a { color: inherit; text-decoration: none; }
-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a { color: inherit; text-decoration: none; } /* Menghapus garis bawah pada link */
+img { display: block; width: 100%; height: 100%; object-fit: cover; } /* Menyesuaikan gambar dengan kontainernya */
 
+/* =========================================
+   HEADER & NAVIGASI UTAMA
+   ========================================= */
 .site-header {
   position: fixed;
   left: 0;
@@ -35,7 +45,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   top: 0;
   z-index: 50;
   background: rgba(248, 253, 255, 0.86);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); /* Efek blur pada background header (glassmorphism) */
   border-bottom: 1px solid rgba(215, 234, 244, 0.92);
   box-shadow: 0 10px 32px rgba(6, 36, 61, 0.08);
 }
@@ -49,16 +59,24 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   align-items: center;
   gap: 18px;
 }
+
+/* Logo & Branding */
 .brand { display: inline-flex; align-items: center; gap: 12px; min-width: 218px; }
 .brand-mark { width: 50px; height: 50px; display: grid; place-items: center; border-radius: 50%; overflow: hidden; background: white; border: 2px solid rgba(4, 138, 191, 0.18); box-shadow: 0 14px 28px rgba(4, 138, 191, 0.20); flex: 0 0 auto; }
 .brand-mark img { width: 100%; height: 100%; object-fit: cover; }
 .brand strong { display: block; font-size: 1rem; }
 .brand small { display: block; margin-top: -2px; color: var(--muted); font-size: 0.74rem; }
+
+/* Menu Link Navigasi */
 .nav-panel { display: flex; justify-content: center; align-items: center; gap: 5px; flex-wrap: wrap; }
 .nav-panel a { padding: 9px 11px; border-radius: 999px; color: #29445a; font-size: 0.84rem; font-weight: 800; transition: 180ms ease; }
 .nav-panel a:hover, .nav-panel a.active { color: white; background: linear-gradient(135deg, var(--blue-700), var(--cyan)); box-shadow: 0 10px 24px rgba(4, 138, 191, 0.18); }
+
+/* Tombol Menu Mobile (Hamburger) */
 .menu-toggle { display: none; border: 0; background: transparent; padding: 8px; }
 .menu-toggle span { display: block; width: 24px; height: 2px; margin: 5px 0; background: var(--blue-950); }
+
+/* Fitur Pencarian di Navigasi */
 .nav-search { position: relative; width: 190px; }
 .nav-search input { width: 100%; height: 42px; border: 1px solid var(--line); border-radius: 999px; padding: 0 16px; color: var(--ink); outline: none; background: white; box-shadow: 0 8px 24px rgba(6, 36, 61, 0.06); }
 .nav-search input:focus { border-color: var(--blue-700); box-shadow: 0 0 0 4px rgba(4, 138, 191, 0.12); }
@@ -69,6 +87,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .result-item strong { display: block; font-size: 0.94rem; }
 .result-item span, .empty-result { color: var(--muted); font-size: 0.82rem; margin: 0; }
 
+/* =========================================
+   HERO SECTION (Banner Utama Halaman)
+   ========================================= */
 .hero-home { max-width: none; margin: 0; min-height: calc(100vh - 76px); padding: clamp(76px, 12vw, 150px) max(22px, calc((100vw - 1220px) / 2)) 88px; display: flex; align-items: center; position: relative; isolation: isolate; overflow: hidden; }
 .hero-home.hero-bg { background-image: linear-gradient(90deg, rgba(6, 36, 61, 0.90), rgba(4, 138, 191, 0.62) 58%, rgba(34, 198, 215, 0.22)), url("images/foto_beranda.jpg"); background-size: cover; background-position: center; }
 .hero-home::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(0deg, var(--paper), transparent); z-index: -1; }
@@ -78,6 +99,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .hero-text p:not(.eyebrow), .page-hero p:not(.section-kicker) { max-width: 620px; color: var(--muted); font-size: 1.12rem; }
 .hero-bg .eyebrow { color: #bfefff; }
 .eyebrow, .section-kicker { margin: 0 0 12px; color: var(--blue-700); font-weight: 900; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* =========================================
+   TOMBOL (Buttons)
+   ========================================= */
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 .btn { min-height: 48px; padding: 12px 18px; border: 0; border-radius: var(--radius); display: inline-flex; align-items: center; justify-content: center; font-weight: 900; cursor: pointer; }
 .btn.primary { color: white; background: linear-gradient(135deg, var(--blue-700), var(--cyan)); box-shadow: 0 16px 34px rgba(4, 138, 191, 0.24); }
@@ -85,63 +110,97 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .btn.soft.glass { color: white; border: 1px solid rgba(255,255,255,0.42); background: rgba(255,255,255,0.12); backdrop-filter: blur(10px); }
 .hero-card { display: none; }
 
+/* =========================================
+   QUICK STATS (Statistik Cepat di Beranda)
+   ========================================= */
 .quick-stats { max-width: 1220px; margin: -20px auto 0; padding: 0 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; position: relative; z-index: 2; }
 .quick-stats article, .feature-list article, .mini-grid article, .news-row article, .news-list article, .timeline article, blockquote, details, .contact-form, .content-card, .event-card, .detail-body aside, .detail-body article { border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 14px 36px rgba(6, 36, 61, 0.07); }
 .quick-stats article { padding: 24px; }
 .quick-stats strong { display: block; color: var(--blue-700); font-size: 2.3rem; line-height: 1; }
 .quick-stats span { color: var(--muted); font-weight: 800; }
 
+/* =========================================
+   TATA LETAK UMUM (Sections & Layouts)
+   ========================================= */
 .section { max-width: 1220px; margin: 0 auto; padding: 84px 22px; }
-.page-hero { max-width: 1220px; margin: 0 auto; padding: 72px 22px 34px; }
+.page-hero { max-width: 1220px; margin: 0 auto; padding: 72px 22px 34px; } /* Khusus untuk header pada sub-halaman */
 .section h2 { margin: 0 0 14px; color: var(--blue-950); font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.08; }
 .section p, .clean-list { color: var(--muted); }
-.two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr); gap: 40px; align-items: start; }
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr); gap: 40px; align-items: start; } /* Tata letak dua kolom */
 .preview-about { padding-top: 74px; }
 .text-link { display: inline-flex; margin-top: 14px; color: var(--blue-700); font-weight: 900; border-bottom: 2px solid currentColor; }
 .text-link.light { color: white; }
 .section-heading { margin-bottom: 26px; }
 .section-heading.split { display: flex; justify-content: space-between; gap: 20px; align-items: end; }
+
+/* =========================================
+   DAFTAR FITUR (Feature List)
+   ========================================= */
 .feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .feature-list.tall { grid-template-columns: 1fr; }
 .feature-list article { padding: 22px; }
 .feature-list span { color: var(--cyan); font-weight: 900; }
 .feature-list h3, .mini-grid h3, .news-row h3, .news-list h3, .timeline h3, .content-card h3, .event-card h3 { margin: 8px 0 6px; line-height: 1.25; color: var(--blue-950); }
+
+/* Tema Pita Biru */
 .blue-band { max-width: none; padding-left: max(22px, calc((100vw - 1220px) / 2)); padding-right: max(22px, calc((100vw - 1220px) / 2)); color: white; background: linear-gradient(135deg, var(--blue-950), var(--blue-700)); }
 .blue-band h2, .blue-band .section-kicker { color: white; }
 .blue-band p, .blue-band time { color: rgba(255,255,255,0.78); }
+
+/* =========================================
+   GRID BERITA & KONTEN UMUM
+   ========================================= */
 .mini-grid, .news-row, .news-list.full, .timeline, .testimonial-grid, .card-grid.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .news-row { grid-template-columns: repeat(2, 1fr); }
 time, .timeline span, .event-card span { display: inline-block; margin-bottom: 10px; color: var(--blue-700); font-size: 0.82rem; font-weight: 900; }
 .news-row article, .news-list article, .timeline article { padding: 24px; }
 .news-list.full { grid-template-columns: 1fr; max-width: 980px; }
+
+/* =========================================
+   TESTIMONIAL ALUMNI
+   ========================================= */
 .testimonial-preview { text-align: left; }
 blockquote { margin: 0; padding: 28px; }
 .avatar { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 4px solid #e8f7ff; }
 .alumni-card { display: flex; flex-direction: column; align-items: flex-start; }
 blockquote p { margin-top: 0; color: #30475a; font-size: 1.04rem; }
 blockquote footer { color: var(--blue-700); font-weight: 900; }
+
+/* =========================================
+   FAQ (Frequently Asked Questions)
+   ========================================= */
 .faq-list { display: grid; gap: 12px; max-width: 900px; }
 .faq-list.compact { max-width: none; grid-template-columns: repeat(2, 1fr); }
 details { padding: 18px 20px; }
 summary { cursor: pointer; color: var(--blue-950); font-weight: 900; }
+
+/* =========================================
+   KARTU KONTEN & GALERI
+   ========================================= */
 .content-card { overflow: hidden; }
 .content-card img { height: 230px; }
 .content-card div { padding: 20px; }
 .tag { color: var(--blue-700); font-size: 0.78rem; font-weight: 900; text-transform: uppercase; }
+
+/* Grid khusus untuk halaman Galeri */
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 250px; gap: 14px; }
 .gallery-grid figure { position: relative; overflow: hidden; margin: 0; border-radius: var(--radius); background: #e8f7ff; }
-.gallery-grid .wide { grid-column: span 2; grid-row: span 2; }
+.gallery-grid .wide { grid-column: span 2; grid-row: span 2; } /* Menampilkan foto ukuran lebih besar */
 .gallery-grid figcaption { position: absolute; left: 14px; bottom: 14px; right: 14px; color: white; font-weight: 900; text-shadow: 0 2px 16px rgba(0,0,0,0.55); }
 
+/* Kartu dengan Gambar (Berita/Kegiatan) */
 .image-cards .event-card { display: block; overflow: hidden; transition: transform 180ms ease, box-shadow 180ms ease; }
-.image-cards .event-card:hover { transform: translateY(-5px); box-shadow: 0 24px 52px rgba(6, 36, 61, 0.16); }
+.image-cards .event-card:hover { transform: translateY(-5px); box-shadow: 0 24px 52px rgba(6, 36, 61, 0.16); } /* Animasi saat di-hover */
 .event-card img { height: 210px; object-fit: cover; }
 .event-card div { padding: 22px; }
 .blue-band .event-card { color: var(--ink); background: white; border-color: rgba(255,255,255,0.28); }
 .blue-band .event-card p { color: var(--muted); }
-.event-card.horizontal { display: grid; grid-template-columns: 280px 1fr; align-items: stretch; }
+.event-card.horizontal { display: grid; grid-template-columns: 280px 1fr; align-items: stretch; } /* Variasi kartu mode horizontal */
 .event-card.horizontal img { height: 100%; min-height: 220px; }
 
+/* =========================================
+   HALAMAN DETAIL (Blog/Berita Detail)
+   ========================================= */
 .detail-hero { max-width: 1220px; margin: 0 auto; padding: 42px 22px 0; display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(320px, 0.9fr); gap: 32px; align-items: center; }
 .detail-hero img { min-height: 360px; border-radius: var(--radius); box-shadow: var(--shadow); }
 .detail-hero h1 { margin: 0; color: var(--blue-950); font-size: clamp(2.35rem, 5vw, 4.5rem); line-height: 1.04; }
@@ -150,6 +209,9 @@ summary { cursor: pointer; color: var(--blue-950); font-weight: 900; }
 .detail-body article, .detail-body aside { padding: 26px; }
 .detail-body h2, .detail-body h3 { margin-top: 0; color: var(--blue-950); }
 
+/* =========================================
+   HALAMAN KONTAK & FORM
+   ========================================= */
 .contact-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 460px); gap: 42px; align-items: start; }
 .contact-list { display: grid; gap: 10px; margin-top: 24px; }
 .contact-list a, .contact-list span { padding: 13px 14px; background: white; border-left: 4px solid var(--blue-700); border-radius: var(--radius); box-shadow: 0 8px 20px rgba(6,36,61,0.07); font-weight: 800; }
@@ -158,22 +220,32 @@ summary { cursor: pointer; color: var(--blue-950); font-weight: 900; }
 .contact-form input, .contact-form textarea { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); padding: 13px; font: inherit; resize: vertical; }
 .form-note { min-height: 24px; margin: 0; color: var(--blue-700) !important; font-weight: 900; }
 .clean-list { padding-left: 20px; }
+
+/* =========================================
+   FOOTER
+   ========================================= */
 .footer { padding: 36px max(22px, calc((100vw - 1220px) / 2)); color: white; background: var(--blue-950); display: flex; justify-content: space-between; gap: 24px; align-items: center; }
 .footer p { margin: 4px 0 0; color: rgba(255,255,255,0.7); }
 .footer-contact { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
 .footer-contact a { color: #bfefff; font-weight: 800; }
 
+/* =========================================
+   MEDIA QUERIES (Untuk Responsive Design)
+   ========================================= */
+
+/* Tablet & Layar Desktop Sedang */
 @media (max-width: 1160px) {
   .navbar { grid-template-columns: auto auto 1fr; }
   .menu-toggle { display: block; order: 2; }
   .nav-search { order: 3; width: min(260px, 42vw); justify-self: end; }
   .nav-panel { position: fixed; left: 16px; right: 16px; top: 82px; display: none; padding: 14px; justify-content: flex-start; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-  .nav-panel.open { display: flex; }
+  .nav-panel.open { display: flex; } /* Menampilkan menu mobile saat tombol ditekan */
   .two-col, .contact-section, .event-card.horizontal, .detail-hero, .detail-body { grid-template-columns: 1fr; }
   .mini-grid, .timeline, .testimonial-grid, .card-grid.three { grid-template-columns: repeat(2, 1fr); }
   .event-card.horizontal img { height: 240px; }
 }
 
+/* Smartphone & Layar Kecil */
 @media (max-width: 680px) {
   body { padding-top: 126px; }
   .navbar { padding: 0 16px; grid-template-columns: auto auto; gap: 10px; }
@@ -192,6 +264,4 @@ summary { cursor: pointer; color: var(--blue-950); font-weight: 900; }
   .detail-hero img { min-height: 260px; }
   .footer { display: block; }
   .footer-contact { margin-top: 16px; justify-content: flex-start; }
-}
-
-
+} 
