@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asrama Felicia | Peta Situs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .sitemap-wrap {
+      overflow-x: auto;
+      padding: 8px 0 24px;
+    }
+    .sitemap-wrap svg {
+      display: block;
+      min-width: 700px;
+    }
+
+    /* Node boxes */
+    .sm-node { cursor: pointer; }
+    .sm-node rect { transition: opacity 0.15s; }
+    .sm-node:hover rect { opacity: 0.82; }
+    .sm-node a { text-decoration: none; }
+
+    /* Level 0 — navy fill */
+    .sm-l0 rect { fill: #06243d; stroke: #06243d; }
+    .sm-l0 text { fill: #ffffff; }
+
+    /* Level 1 — primary blue fill */
+    .sm-l1 rect { fill: #048abf; stroke: #036d96; }
+    .sm-l1 text { fill: #ffffff; }
+
+    /* Level 2 — soft blue fill */
+    .sm-l2 rect { fill: #e8f7ff; stroke: #b8dff0; }
+    .sm-l2 text { fill: #06243d; }
+
+    /* Connector lines */
+    .sm-line { stroke: #b8dff0; stroke-width: 1.2; fill: none; }
+
+    /* XML info box */
+    .sitemap-xml-box {
+      margin-top: 40px;
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .sitemap-xml-box p  { margin: 6px 0 0; color: rgba(255,255,255,0.65); font-size: 0.875rem; }
+    .sitemap-xml-box strong { color: white; font-size: 1rem; }
+    .sitemap-xml-box .btn { flex-shrink: 0; }
+  </style>
+</head>
+<body data-page="sitemap">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-xl" aria-label="Navigasi utama">
+      <div class="container-fluid nav-wrap">
+        <a class="brand navbar-brand" href="index.html">
+          <span class="brand-mark"><img src="images/logo.jfif" alt="Logo Asrama Felicia" /></span>
+          <span><strong>Asrama Felicia</strong><small>Rumah Kader Mahasiswa</small></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <div class="navbar-nav mx-xl-auto nav-panel">
+            <a class="nav-link" href="index.html"    data-nav="home">Home</a>
+            <a class="nav-link" href="tentang.html"  data-nav="tentang">Tentang</a>
+            <a class="nav-link" href="blog.html"     data-nav="blog">Blog</a>
+            <a class="nav-link" href="berita.html"   data-nav="berita">Berita</a>
+            <a class="nav-link" href="galeri.html"   data-nav="galeri">Galeri</a>
+            <a class="nav-link" href="kegiatan.html" data-nav="kegiatan">Kegiatan</a>
+            <a class="nav-link" href="alumni.html"   data-nav="alumni">Alumni</a>
+            <a class="nav-link" href="faq.html"      data-nav="faq">FAQ</a>
+            <a class="nav-link" href="kontak.html"   data-nav="kontak">Kontak</a>
+          </div>
+          <div class="nav-search ms-xl-3" role="search">
+            <input id="siteSearch" class="form-control" type="search" placeholder="Cari..." autocomplete="off" />
+            <div class="search-results" id="searchResults" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="section-kicker">Peta Situs</p>
+      <h1>Semua halaman Asrama Felicia dalam satu tempat.</h1>
+      <p>Flowchart hierarki navigasi website — dari Home hingga setiap sub-halaman.</p>
+    </section>
+
+    <section class="section">
+      <div class="sitemap-wrap">
+        <!--
+          SVG FLOWCHART
+          Canvas  : 1100 × 560
+          Level 0 : Home  — y=30, h=44, cx=550
+          Level 1 : 7 halaman — y=140, h=40, spaced evenly cx: 80,230,330,440,560,700,830,980 (adjusted below)
+          Level 2 : sub-halaman — y=260, h=36
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" aria-label="Sitemap flowchart Asrama Felicia">
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M2 1L8 5L2 9" fill="none" stroke="#b8dff0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+          </defs>
+
+          <!-- ═══════════════════════════════════════
+               LEVEL 0 — HOME  cx=550, y=30 w=140 h=44
+          ═══════════════════════════════════════ -->
+          <a href="index.html">
+            <g class="sm-node sm-l0">
+              <rect x="480" y="30" width="140" height="44" rx="8"/>
+              <text x="550" y="52" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="15" font-weight="700">Home</text>
+            </g>
+          </a>
+
+          <!-- Trunk line down -->
+          <line class="sm-line" x1="550" y1="74" x2="550" y2="108" marker-end="url(#arr)"/>
+
+          <!-- Horizontal spine -->
+          <line class="sm-line" x1="80"  y1="108" x2="1020" y2="108"/>
+
+          <!-- Vertical drops to L1 (cx: 80,195,310,440,570,700,830,975) -->
+          <line class="sm-line" x1="80"   y1="108" x2="80"   y2="128" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="195"  y1="108" x2="195"  y2="128" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="310"  y1="108" x2="310"  y2="128" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="440"  y1="108" x2="440"  y2="128" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="570"  y1="108" x2="570"  y2="128" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="700"  y1="108" x2="700"  y2="128" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="830"  y1="108" x2="830"  y2="128" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="975"  y1="108" x2="975"  y2="128" marker-end="url(#arr)"/>
+
+          <!-- ═══════════════════════════════════════
+               LEVEL 1 — 8 halaman  y=128 h=40
+               cx: 80, 195, 310, 440, 570, 700, 830, 975
+               w=110 each (cx-55 .. cx+55)
+          ═══════════════════════════════════════ -->
+
+          <!-- Tentang -->
+          <a href="tentang.html">
+            <g class="sm-node sm-l1">
+              <rect x="25"  y="128" width="110" height="40" rx="7"/>
+              <text x="80"  y="148" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">Tentang</text>
+            </g>
+          </a>
+
+          <!-- Kegiatan -->
+          <a href="kegiatan.html">
+            <g class="sm-node sm-l1">
+              <rect x="140" y="128" width="110" height="40" rx="7"/>
+              <text x="195" y="148" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">Kegiatan</text>
+            </g>
+          </a>
+
+          <!-- Blog -->
+          <a href="blog.html">
+            <g class="sm-node sm-l1">
+              <rect x="255" y="128" width="110" height="40" rx="7"/>
+              <text x="310" y="148" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">Blog</text>
+            </g>
+          </a>
+
+          <!-- Berita -->
+          <a href="berita.html">
+            <g class="sm-node sm-l1">
+              <rect x="385" y="128" width="110" height="40" rx="7"/>
+              <text x="440" y="148" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">Berita</text>
+            </g>
+          </a>
+
+          <!-- Galeri -->
+          <a href="galeri.html">
+            <g class="sm-node sm-l1">
+              <rect x="515" y="128" width="110" height="40" rx="7"/>
+              <text x="570" y="148" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">Galeri</text>
+            </g>
+          </a>
+
+          <!-- Alumni -->
+          <a href="alumni.html">
+            <g class="sm-node sm-l1">
+              <rect x="645" y="128" width="110" height="40" rx="7"/>
+              <text x="700" y="148" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">Alumni</text>
+            </g>
+          </a>
+
+          <!-- FAQ -->
+          <a href="faq.html">
+            <g class="sm-node sm-l1">
+              <rect x="775" y="128" width="110" height="40" rx="7"/>
+              <text x="830" y="148" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">FAQ</text>
+            </g>
+          </a>
+
+          <!-- Kontak -->
+          <a href="kontak.html">
+            <g class="sm-node sm-l1">
+              <rect x="920" y="128" width="110" height="40" rx="7"/>
+              <text x="975" y="148" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">Kontak</text>
+            </g>
+          </a>
+
+          <!-- ═══════════════════════════════════════
+               CONNECTORS L1 → L2  (spine at y=215)
+          ═══════════════════════════════════════ -->
+
+          <!-- TENTANG → 2 subs: cx 40, 120 -->
+          <line class="sm-line" x1="80"  y1="168" x2="80"  y2="215"/>
+          <line class="sm-line" x1="40"  y1="215" x2="120" y2="215"/>
+          <line class="sm-line" x1="40"  y1="215" x2="40"  y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="120" y1="215" x2="120" y2="235" marker-end="url(#arr)"/>
+
+          <!-- KEGIATAN → 4 subs: cx 152,178,212,238 -->
+          <line class="sm-line" x1="195" y1="168" x2="195" y2="215"/>
+          <line class="sm-line" x1="152" y1="215" x2="238" y2="215"/>
+          <line class="sm-line" x1="152" y1="215" x2="152" y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="178" y1="215" x2="178" y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="212" y1="215" x2="212" y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="238" y1="215" x2="238" y2="235" marker-end="url(#arr)"/>
+
+          <!-- BERITA → 3 subs: cx 400,440,480 -->
+          <line class="sm-line" x1="440" y1="168" x2="440" y2="215"/>
+          <line class="sm-line" x1="400" y1="215" x2="480" y2="215"/>
+          <line class="sm-line" x1="400" y1="215" x2="400" y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="440" y1="215" x2="440" y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="480" y1="215" x2="480" y2="235" marker-end="url(#arr)"/>
+
+          <!-- GALERI → 2 subs: cx 545,595 -->
+          <line class="sm-line" x1="570" y1="168" x2="570" y2="215"/>
+          <line class="sm-line" x1="545" y1="215" x2="595" y2="215"/>
+          <line class="sm-line" x1="545" y1="215" x2="545" y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="595" y1="215" x2="595" y2="235" marker-end="url(#arr)"/>
+
+          <!-- ALUMNI → 2 subs: cx 670,730 -->
+          <line class="sm-line" x1="700" y1="168" x2="700" y2="215"/>
+          <line class="sm-line" x1="670" y1="215" x2="730" y2="215"/>
+          <line class="sm-line" x1="670" y1="215" x2="670" y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="730" y1="215" x2="730" y2="235" marker-end="url(#arr)"/>
+
+          <!-- FAQ → 2 subs: cx 805,860 -->
+          <line class="sm-line" x1="830" y1="168" x2="830" y2="215"/>
+          <line class="sm-line" x1="805" y1="215" x2="860" y2="215"/>
+          <line class="sm-line" x1="805" y1="215" x2="805" y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="860" y1="215" x2="860" y2="235" marker-end="url(#arr)"/>
+
+          <!-- KONTAK → 2 subs: cx 950,1005 -->
+          <line class="sm-line" x1="975" y1="168" x2="975" y2="215"/>
+          <line class="sm-line" x1="950" y1="215" x2="1005" y2="215"/>
+          <line class="sm-line" x1="950"  y1="215" x2="950"  y2="235" marker-end="url(#arr)"/>
+          <line class="sm-line" x1="1005" y1="215" x2="1005" y2="235" marker-end="url(#arr)"/>
+
+          <!-- ═══════════════════════════════════════
+               LEVEL 2 — sub-halaman  y=235 h=36
+          ═══════════════════════════════════════ -->
+
+          <!-- TENTANG subs -->
+          <a href="tentang.html">
+            <g class="sm-node sm-l2">
+              <rect x="4"   y="235" width="72" height="36" rx="6"/>
+              <text x="40"  y="253" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#06243d">Profil</text>
+            </g>
+          </a>
+          <a href="tentang.html">
+            <g class="sm-node sm-l2">
+              <rect x="84"  y="235" width="72" height="36" rx="6"/>
+              <text x="120" y="253" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#06243d">Visi &amp; Misi</text>
+            </g>
+          </a>
+
+          <!-- KEGIATAN subs -->
+          <a href="kegiatan-mentoring.html">
+            <g class="sm-node sm-l2">
+              <rect x="126" y="235" width="52" height="50" rx="6"/>
+              <text x="152" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Men-</text>
+              <text x="152" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">toring</text>
+            </g>
+          </a>
+          <a href="kegiatan-leadership.html">
+            <g class="sm-node sm-l2">
+              <rect x="152" y="235" width="52" height="50" rx="6"/>
+              <text x="178" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Leader-</text>
+              <text x="178" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">ship</text>
+            </g>
+          </a>
+          <a href="kegiatan-mengabdi.html">
+            <g class="sm-node sm-l2">
+              <rect x="186" y="235" width="52" height="50" rx="6"/>
+              <text x="212" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Men-</text>
+              <text x="212" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">gabdi</text>
+            </g>
+          </a>
+          <a href="kegiatan-forum-alumni.html">
+            <g class="sm-node sm-l2">
+              <rect x="212" y="235" width="52" height="50" rx="6"/>
+              <text x="238" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Forum</text>
+              <text x="238" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Alumni</text>
+            </g>
+          </a>
+
+          <!-- BERITA subs -->
+          <a href="berita-felicia-mengabdi.html">
+            <g class="sm-node sm-l2">
+              <rect x="372" y="235" width="56" height="50" rx="6"/>
+              <text x="400" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Felicia</text>
+              <text x="400" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Mengabdi</text>
+            </g>
+          </a>
+          <a href="berita-open-recruitment.html">
+            <g class="sm-node sm-l2">
+              <rect x="412" y="235" width="56" height="50" rx="6"/>
+              <text x="440" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Open</text>
+              <text x="440" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Recruitment</text>
+            </g>
+          </a>
+          <a href="berita-public-speaking.html">
+            <g class="sm-node sm-l2">
+              <rect x="452" y="235" width="56" height="50" rx="6"/>
+              <text x="480" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Public</text>
+              <text x="480" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Speaking</text>
+            </g>
+          </a>
+
+          <!-- GALERI subs -->
+          <a href="galeri.html">
+            <g class="sm-node sm-l2">
+              <rect x="518" y="235" width="54" height="50" rx="6"/>
+              <text x="545" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Foto</text>
+              <text x="545" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Kegiatan</text>
+            </g>
+          </a>
+          <a href="galeri.html">
+            <g class="sm-node sm-l2">
+              <rect x="568" y="235" width="54" height="50" rx="6"/>
+              <text x="595" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Kehidupan</text>
+              <text x="595" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Asrama</text>
+            </g>
+          </a>
+
+          <!-- ALUMNI subs -->
+          <a href="alumni.html">
+            <g class="sm-node sm-l2">
+              <rect x="638" y="235" width="64" height="36" rx="6"/>
+              <text x="670" y="253" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#06243d">Profil</text>
+            </g>
+          </a>
+          <a href="alumni.html">
+            <g class="sm-node sm-l2">
+              <rect x="698" y="235" width="64" height="36" rx="6"/>
+              <text x="730" y="253" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#06243d">Testimonial</text>
+            </g>
+          </a>
+
+          <!-- FAQ subs -->
+          <a href="faq.html">
+            <g class="sm-node sm-l2">
+              <rect x="775" y="235" width="60" height="50" rx="6"/>
+              <text x="805" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Syarat</text>
+              <text x="805" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Bergabung</text>
+            </g>
+          </a>
+          <a href="faq.html">
+            <g class="sm-node sm-l2">
+              <rect x="831" y="235" width="58" height="50" rx="6"/>
+              <text x="860" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Cara</text>
+              <text x="860" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Daftar</text>
+            </g>
+          </a>
+
+          <!-- KONTAK subs -->
+          <a href="kontak.html">
+            <g class="sm-node sm-l2">
+              <rect x="916" y="235" width="68" height="50" rx="6"/>
+              <text x="950" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Form</text>
+              <text x="950" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Pesan</text>
+            </g>
+          </a>
+          <a href="kontak.html">
+            <g class="sm-node sm-l2">
+              <rect x="970" y="235" width="68" height="50" rx="6"/>
+              <text x="1005" y="257" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Lokasi &amp;</text>
+              <text x="1005" y="271" text-anchor="middle" dominant-baseline="central" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#06243d">Sosmed</text>
+            </g>
+          </a>
+
+          <!-- ═══ LEGEND ═══ -->
+          <rect x="30"  y="360" width="16" height="16" rx="4" fill="#06243d"/>
+          <text x="54"  y="368" dominant-baseline="central" font-family="Inter,sans-serif" font-size="12" fill="#647587">Halaman utama</text>
+          <rect x="170" y="360" width="16" height="16" rx="4" fill="#048abf"/>
+          <text x="194" y="368" dominant-baseline="central" font-family="Inter,sans-serif" font-size="12" fill="#647587">Navigasi utama (level 1)</text>
+          <rect x="380" y="360" width="16" height="16" rx="4" fill="#e8f7ff" stroke="#b8dff0" stroke-width="1"/>
+          <text x="404" y="368" dominant-baseline="central" font-family="Inter,sans-serif" font-size="12" fill="#647587">Sub-halaman (level 2)</text>
+
+          <text x="550" y="410" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#b0c8d8">Gulir ke kanan jika diagram terpotong di layar kecil</text>
+        </svg>
+      </div>
+
+      <!-- XML Sitemap info box -->
+      <div class="sitemap-xml-box">
+        <div>
+          <strong>🔍 File XML Sitemap untuk Mesin Pencari</strong>
+          <p>File <code style="color: var(--cyan); background: rgba(34,198,215,0.15); padding: 2px 6px; border-radius: 4px;">sitemap.xml</code> tersedia untuk membantu Google dan Bing mengindeks semua halaman website ini.</p>
+        </div>
+        <a class="btn primary" href="sitemap.xml" target="_blank">Lihat sitemap.xml</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="kontak-footer">
+    <div><strong>Asrama Felicia</strong><p>Pengkaderan mahasiswa untuk karakter, kepemimpinan, dan kontribusi.</p></div>
+    <div class="footer-contact">
+      <a href="mailto:asramafelicia@example.com">asramafelicia@example.com</a>
+      <a href="https://wa.me/6281234567890">+62 812-3456-7890</a>
+      <a href="kontak.html">Kontak lengkap</a>
+      <a href="sitemap.html">Peta Situs</a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
